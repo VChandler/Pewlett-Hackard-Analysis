@@ -34,6 +34,15 @@ group by title
 order by count desc;
 ```
 
-Departments most impacted by upcoming retirements:
+Departments most impacted by upcoming retirements:  
+![dept](https://user-images.githubusercontent.com/88070999/134790455-e3f8ffa0-3977-4bf8-858b-aabdab8d5147.png)
 
-
+```
+SELECT de.dept_no, COUNT(e.emp_no)
+FROM employees as e
+INNER JOIN dept_emp as de
+ON e.emp_no = de.emp_no
+WHERE (e.birth_date >= '1952-01-01' AND e.birth_date <= '1955-12-31' AND de.to_date = '9999-01-01')
+GROUP BY de.dept_no
+ORDER BY count DESC;
+```
