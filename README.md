@@ -15,6 +15,25 @@ To help fill this void of technical and people leadership, we have conducted an 
 ![mentorship](https://user-images.githubusercontent.com/88070999/134785538-da792da0-5f79-4dea-b50b-ae498be8ee5c.png)  
 
 ## Summary  
-### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+### How many roles will need to be filled as the "silver tsunami" begins to make an impact?  
+The wave of upcoming retirements will be significant- 45,397 (38% of the company's workforce).  Substantial efforts will be required in the form of mentorship programs, recruiting, cross-training, and many other initiatives to mitigate the impacts of retirements over the next few years.
+### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?  
+There are more than enough retirement ready employees (born between 1952 and 1955) who could help mentor those in the mentorship program, and in turn mentor future generations of employees.  Though mentoring alone will not be sufficient in filling the gaps led by retirements, necessitating further recruiting programs.
 Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
+For comparison, titles retiring soon:  
+![retiring-titles](https://user-images.githubusercontent.com/88070999/134789280-46049d01-90f1-4094-ad52-ed078b903570.png)  
+
+Count of current titles:  
+![current_count](https://user-images.githubusercontent.com/88070999/134789291-839a486a-6585-4a1b-a908-53d7eef6cf0f.png)  
+SQL code to generate:
+```
+select title, count(emp_no)
+from titles
+where to_date = '9999-01-01'
+group by title
+order by count desc;
+```
+
+Departments most impacted by upcoming retirements:
+
+
